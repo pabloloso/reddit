@@ -1,9 +1,8 @@
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
-import { getPosts } from './store/posts/selectors'
-
-import { fetchPostsRequestAction } from './store/posts/actions'
+import { fetchPostsRequestAction } from 'store/posts/actions'
+import { getPosts } from 'store/posts/selectors'
 
 function App () {
   const dispatch = useDispatch()

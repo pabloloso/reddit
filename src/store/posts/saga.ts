@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { call, put } from 'redux-saga/effects'
 
-import { Child, Posts, PostsMapped } from '../../types/Posts'
+import { Child, Posts, PostsMapped } from 'types/Posts'
 
 import { fetchPostsSuccessActions, fetchPostsFailureActions } from './actions'
 

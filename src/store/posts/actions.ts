@@ -1,4 +1,4 @@
-import { PostsMapped } from '../../types/Posts'
+import { PostsMapped } from 'types/Posts'
 
 import {
   FETCH_POSTS_REQUEST,
