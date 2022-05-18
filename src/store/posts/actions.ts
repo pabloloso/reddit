@@ -5,7 +5,6 @@ import {
   FETCH_POSTS_SUCCESS,
   FETCH_POSTS_FAILURE
 } from './constants'
-
 import {
   FetchPostsFailurePayload,
   FetchPostsRequest,

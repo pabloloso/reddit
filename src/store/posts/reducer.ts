@@ -3,7 +3,6 @@ import {
   FETCH_POSTS_SUCCESS,
   FETCH_POSTS_FAILURE
 } from './constants'
-
 import { PostsActions, PostsState } from './types'
 
 const initialState: PostsState = {
