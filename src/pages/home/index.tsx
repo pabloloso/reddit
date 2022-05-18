@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { fetchPostsRequestAction } from 'store/posts/actions'
 import { getPosts } from 'store/posts/selectors'
 
-function App () {
+function Home () {
   const dispatch = useDispatch()
 
   const posts = useSelector(getPosts)
@@ -22,4 +22,4 @@ function App () {
   )
 }
 
-export default App
+export default Home

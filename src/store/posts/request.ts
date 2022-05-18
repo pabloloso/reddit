@@ -6,6 +6,6 @@ import { mapperPosts } from './mapper'
 
 export const fetchPosts = async () => {
   return axios
-    .get<Posts>('https://api.reddit.com/r/pics/new.json')
+    .get<Posts>(`${process.env.NEXT_PUBLIC_API_BASE_URL}/r/pics/new.json`)
     .then(response => mapperPosts(response.data.data.children))
 }
