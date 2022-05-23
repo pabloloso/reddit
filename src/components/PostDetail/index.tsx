@@ -5,7 +5,6 @@ import { PostsMapped } from 'types/Posts'
 import { timeSince } from 'utils/timeSince'
 
 import {
-  PostDetailContainer,
   PostDetailClose,
   PostDetailContent,
   PostDetailCard,
@@ -26,7 +25,7 @@ const PostDetail = ({
   const todayTimespant = new Date().getTime()
 
   return (
-    <PostDetailContainer>
+    <>
       <PostDetailClose>
         <Link href='/'>
           Cerrar
@@ -40,16 +39,16 @@ const PostDetail = ({
             <Title>{title}</Title>
           </ImageTitleContainer>
           <ScoreCommentsContainer>
-            <div>
+            <span>
               Puntuación {score}
-            </div>
-            <div>
+            </span>
+            <span>
               {numComments} comentarios
-            </div>
+            </span>
           </ScoreCommentsContainer>
         </PostDetailCard>
       </PostDetailContent>
-    </PostDetailContainer>
+    </>
   )
 }
 

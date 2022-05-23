@@ -1,10 +1,5 @@
 import styled from 'styled-components'
 
-export const PostDetailContainer = styled.div`
-  max-width: 800px;
-  margin: 0 auto;
-`
-
 export const PostDetailClose = styled.div`
   background-color: #030303;
   color: #d7dadc;
@@ -42,7 +37,6 @@ export const Title = styled.h1`
 `
 
 export const ScoreCommentsContainer = styled.div`
-  display: flex;
   color: #787C7E;
   font-size: 12px;
   font-weight: 400;

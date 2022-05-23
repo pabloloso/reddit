@@ -6,8 +6,9 @@ import { getIsFetching, getPosts } from 'store/posts/selectors'
 
 import PostCardList from 'components/PostCardList'
 import Button from 'components/common/Button'
+import Loader from 'components/common/Loader'
 
-import { ButtonContainer } from 'styles/pages/Home'
+import { ButtonContainer, LoaderContainer } from 'styles/pages/Home'
 
 const HomePage = () => {
   const [updateList, setUpdateList] = useState(false)
@@ -35,7 +36,7 @@ const HomePage = () => {
           onClick={handleUpdateList}
         />
       </ButtonContainer>
-      {isFetching ? 'Loading ...' : <PostCardList posts={posts} />}
+      {isFetching ? <LoaderContainer><Loader /></LoaderContainer> : <PostCardList posts={posts} />}
     </>
   )
 }

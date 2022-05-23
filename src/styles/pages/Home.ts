@@ -6,3 +6,9 @@ export const ButtonContainer = styled.div`
   justify-content: center;
   margin: 30px 0;
 `
+
+export const LoaderContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`

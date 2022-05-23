@@ -25,11 +25,25 @@ export async function getServerSideProps (context: GetServerSidePropsContext) {
   const response = await axios.get(`${process.env.NEXT_PUBLIC_API_BASE_URL}${resolvedUrl}`)
   const [data] = response.data
 
-  const { author, created, num_comments: numComments, score, thumbnail, title } = data.data.children[0].data
+  const {
+    author,
+    created,
+    num_comments: numComments,
+    score,
+    thumbnail,
+    title
+  } = data.data.children[0].data
 
   return {
     props: {
-      post: { author, created, numComments, score, thumbnail, title }
+      post: {
+        author,
+        created,
+        numComments,
+        score,
+        thumbnail,
+        title
+      }
     }
   }
 }

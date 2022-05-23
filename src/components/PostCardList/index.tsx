@@ -2,11 +2,9 @@ import { PostCardListProps } from './interfaces'
 
 import PostCard from 'components/PostCard'
 
-import { PostCardListContainer } from './styles'
-
 const PostCardList = ({ posts = [] }: PostCardListProps) => {
   return (
-    <PostCardListContainer>
+    <div>
       {posts.map(post => (
         <PostCard
           key={post.id}
@@ -20,7 +18,7 @@ const PostCardList = ({ posts = [] }: PostCardListProps) => {
           permalink={post.permalink}
         />
       ))}
-    </PostCardListContainer>
+    </div>
   )
 }
 
