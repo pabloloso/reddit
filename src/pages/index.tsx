@@ -27,9 +27,6 @@ const HomePage = () => {
     }
   }
 
-  console.log('posts', posts)
-  console.log('isFetching', isFetching)
-
   return (
     <>
       <ButtonContainer>

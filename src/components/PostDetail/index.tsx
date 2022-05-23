@@ -2,6 +2,8 @@ import Link from 'next/link'
 
 import { PostsMapped } from 'types/Posts'
 
+import { timeSince } from 'utils/timeSince'
+
 import {
   PostDetailContainer,
   PostDetailClose,
@@ -21,6 +23,8 @@ const PostDetail = ({
   thumbnail,
   title
 }: Omit<PostsMapped, 'id' | 'permalink'>) => {
+  const todayTimespant = new Date().getTime()
+
   return (
     <PostDetailContainer>
       <PostDetailClose>
@@ -30,7 +34,7 @@ const PostDetail = ({
       </PostDetailClose>
       <PostDetailContent>
         <PostDetailCard>
-          <Author>Publicado por {author} hace {created}</Author>
+          <Author>Publicado por {author} hace {timeSince(todayTimespant, created)}</Author>
           <ImageTitleContainer>
             <img src={thumbnail} />
             <Title>{title}</Title>
