@@ -15,7 +15,9 @@ const reducer = (state = initialState, action: PostsActions) => {
   switch (action.type) {
     case FETCH_POSTS_REQUEST:
       return {
-        ...state
+        ...state,
+        error: null,
+        isFetching: true
       }
 
     case FETCH_POSTS_SUCCESS:
