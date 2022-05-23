@@ -17,6 +17,7 @@ const PostCardList = ({ posts = [] }: PostCardListProps) => {
           score={post.score}
           thumbnail={post.thumbnail}
           title={post.title}
+          permalink={post.permalink}
         />
       ))}
     </PostCardListContainer>

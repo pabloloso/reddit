@@ -1,9 +1,23 @@
-import Home from './home'
+import { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 
-function App () {
+import { fetchPostsRequestAction } from 'store/posts/actions'
+import { getPosts } from 'store/posts/selectors'
+
+import PostCardList from 'components/PostCardList'
+
+const HomePage = () => {
+  const dispatch = useDispatch()
+
+  const posts = useSelector(getPosts)
+
+  useEffect(() => {
+    dispatch(fetchPostsRequestAction())
+  }, [])
+
   return (
-    <Home />
+    <PostCardList posts={posts} />
   )
 }
 
-export default App
+export default HomePage

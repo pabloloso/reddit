@@ -1,23 +1,4 @@
-import styled, { css } from 'styled-components'
-
-const greyColor = '#787C7E'
-const blackColor = '##222222'
-
-const fontStyle1 = css`
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 16px;
-`
-
-const commonTextSyle = css`
-  color: ${greyColor};
-
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-
-  ${fontStyle1}
-`
+import styled from 'styled-components'
 
 export const PostCardListContainer = styled.div`
   display: grid;
@@ -29,6 +10,7 @@ export const PostCardListContainer = styled.div`
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 10px;
+  background-color: #ffffff;
 
   &:hover {
     border: 1px solid #898989;
@@ -56,18 +38,20 @@ export const Image = styled.img`
 export const Date = styled.div`
   grid-area: 1 / 5 / 2 / 7;
 
-  color: ${greyColor};
+  color: #787C7E;
 
   display: flex;
   justify-content: flex-end;
 
-  ${fontStyle1}
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
 `
 
 export const Title = styled.h3`
   grid-area: 2 / 3 / 3 / 7;
 
-  color: ${blackColor};
+  color: #222222;
 
   font-size: 18px;
   font-weight: 500;
@@ -77,22 +61,40 @@ export const Title = styled.h3`
 export const Author = styled.div`
   grid-area: 3 / 3 / 5 / 5;
 
-  color: ${greyColor};
+  color: #787C7E;
 
   display: flex;
   align-items: flex-end;
 
-  ${fontStyle1}
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
 `
 
 export const Score = styled.div`
   grid-area: 3 / 5 / 5 / 6;
 
-  ${commonTextSyle}
+  color: #787C7E;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
 `
 
 export const Comments = styled.div`
   grid-area: 3 / 6 / 5 / 7;
 
-  ${commonTextSyle}
+  color: #787C7E;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
 `

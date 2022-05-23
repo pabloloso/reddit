@@ -9,7 +9,8 @@ export const mapperPosts = (posts: Child[]): PostsMapped[] => posts.map(post => 
     author,
     score,
     num_comments: numComments,
-    created
+    created,
+    permalink
   } = data
 
   return {
@@ -19,6 +20,7 @@ export const mapperPosts = (posts: Child[]): PostsMapped[] => posts.map(post => 
     author,
     score,
     numComments,
-    created
+    created,
+    permalink
   }
 })

@@ -8,6 +8,7 @@ export interface PostsMapped {
   score: number;
   thumbnail: string;
   title: string;
+  permalink: string;
 }
 
 export interface Posts {
