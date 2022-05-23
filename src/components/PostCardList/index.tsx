@@ -2,7 +2,7 @@ import { PostCardListProps } from './interfaces'
 
 import PostCard from 'components/PostCard'
 
-const PostCardList = ({ posts = [] }: PostCardListProps) => {
+const PostCardList = ({ posts }: PostCardListProps) => {
   return (
     <div>
       {posts.map(post => (

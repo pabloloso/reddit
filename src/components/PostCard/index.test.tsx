@@ -5,7 +5,7 @@ import { post1 } from 'mocks/tests/posts'
 import PostCard from '.'
 
 describe('PostCard component', () => {
-  it('should render PostCard component with label and click function', () => {
+  it('should render PostCard component with post data', () => {
     render(<PostCard
       id={post1.id}
       author={post1.author}
@@ -17,7 +17,7 @@ describe('PostCard component', () => {
       permalink={post1.permalink}
     />)
 
-    expect(screen.getByRole('link', { name: /Publicado hace 3 horas/i })).toHaveAttribute('href', '/link')
+    expect(screen.getByRole('link')).toHaveAttribute('href', '/link')
     expect(screen.getByRole('heading', { level: 3, name: /The night is dark/i })).toBeInTheDocument()
     expect(screen.getByRole('img')).toBeInTheDocument()
 
