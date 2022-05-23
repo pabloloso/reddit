@@ -5,7 +5,7 @@ import Button from '.'
 const mockedFunction = jest.fn()
 
 describe('Button component', () => {
-  it('should return button with label', () => {
+  it('should render Button component with label and click function', () => {
     render(<Button label='My button' onClick={mockedFunction} />)
 
     const button = screen.getByText('My button')
