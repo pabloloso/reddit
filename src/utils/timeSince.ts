@@ -5,7 +5,7 @@ export const timeSince = (current: number, previous: number) => {
   const msPerMonth = msPerDay * 30
   const msPerYear = msPerDay * 365
 
-  const elapsed = new Date().getTime() - previous
+  const elapsed = current - previous
 
   if (elapsed < msPerMinute) {
     return Math.round(elapsed / 1000) + ' segundos'
