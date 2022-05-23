@@ -4,6 +4,8 @@ import { useDispatch, useSelector } from 'react-redux'
 import { fetchPostsRequestAction } from 'store/posts/actions'
 import { getPosts } from 'store/posts/selectors'
 
+import PostCardList from 'components/PostCardList'
+
 function Home () {
   const dispatch = useDispatch()
 
@@ -15,9 +17,7 @@ function Home () {
 
   return (
     <div>
-      {posts.map(post => (
-        <div key={post.id}>{post.title}</div>
-      ))}
+      <PostCardList posts={posts} />
     </div>
   )
 }
