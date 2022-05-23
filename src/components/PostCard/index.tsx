@@ -16,7 +16,7 @@ const PostCard = ({ author, created, numComments, score, thumbnail, title, perma
           <ImageContainer>
             <Image src={thumbnail} />
           </ImageContainer>
-          <Date>{timeSince(todayTimespant, created)}</Date>
+          <Date>Publicado hace {timeSince(todayTimespant, created)}</Date>
           <Title>{title}</Title>
           <Author>
             Publicado por {author}

@@ -8,24 +8,24 @@ export const timeSince = (current: number, previous: number) => {
   const elapsed = new Date().getTime() - previous
 
   if (elapsed < msPerMinute) {
-    return Math.round(elapsed / 1000) + ' seconds ago'
+    return Math.round(elapsed / 1000) + ' segundos'
   }
 
   if (elapsed < msPerHour) {
-    return Math.round(elapsed / msPerMinute) + ' minutes ago'
+    return Math.round(elapsed / msPerMinute) + ' minutos'
   }
 
   if (elapsed < msPerDay) {
-    return Math.round(elapsed / msPerHour) + ' hours ago'
+    return Math.round(elapsed / msPerHour) + ' horas'
   }
 
   if (elapsed < msPerMonth) {
-    return 'approximately ' + Math.round(elapsed / msPerDay) + ' days ago'
+    return Math.round(elapsed / msPerDay) + ' días'
   }
 
   if (elapsed < msPerYear) {
-    return 'approximately ' + Math.round(elapsed / msPerMonth) + ' months ago'
+    return Math.round(elapsed / msPerMonth) + ' meses'
   }
 
-  return 'approximately ' + Math.round(elapsed / msPerYear) + ' years ago'
+  return Math.round(elapsed / msPerYear) + ' años'
 }

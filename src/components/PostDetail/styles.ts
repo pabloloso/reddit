@@ -42,5 +42,6 @@ export const ScoreCommentsContainer = styled.div`
   font-weight: 400;
   line-height: 16px;
   margin-top: 20px;
-  gap: 10px;
+  gap: 30px;
+  display: flex;
 `
