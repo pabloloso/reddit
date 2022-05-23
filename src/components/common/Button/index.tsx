@@ -1,8 +1,7 @@
-import { MouseEventHandler } from 'react'
-
+import { ButtonProps } from './interfaces'
 import { ButtonBase } from './styles'
 
-const Button = ({ label, onClick }: { label: string, onClick: MouseEventHandler<HTMLButtonElement> }) => {
+const Button = ({ label, onClick }: ButtonProps) => {
   return (
     <ButtonBase onClick={onClick}>
       {label}
