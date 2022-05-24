@@ -1,28 +1,31 @@
 import { render, screen } from '@testing-library/react'
 
-import { post1 } from 'mocks/tests/posts'
+import { postMapped1 } from 'mocks/tests/posts'
 
 import PostCard from '.'
 
 describe('PostCard component', () => {
   it('should render PostCard component with post data', () => {
     render(<PostCard
-      id={post1.id}
-      author={post1.author}
-      created={post1.created}
-      numComments={post1.numComments}
-      score={post1.score}
-      thumbnail={post1.thumbnail}
-      title={post1.title}
-      permalink={post1.permalink}
+      id={postMapped1.id}
+      author={postMapped1.author}
+      created={postMapped1.created}
+      numComments={postMapped1.numComments}
+      score={postMapped1.score}
+      thumbnail={postMapped1.thumbnail}
+      title={postMapped1.title}
+      permalink={postMapped1.permalink}
     />)
 
-    expect(screen.getByRole('link')).toHaveAttribute('href', '/link')
-    expect(screen.getByRole('heading', { level: 3, name: /The night is dark/i })).toBeInTheDocument()
+    expect(screen.getByRole('link')).toHaveAttribute(
+      'href',
+      '/r/pics/comments/uwm0dj/oc_a_picture_i_took_of_the_sunset_at_queens_bath'
+    )
+    expect(screen.getByRole('heading', { level: 3, name: /A picture I took of the sunset/i })).toBeInTheDocument()
     expect(screen.getByRole('img')).toBeInTheDocument()
 
-    expect(screen.getByText('Publicado por Jon snow')).toBeInTheDocument()
-    expect(screen.getByText('11 comentarios')).toBeInTheDocument()
-    expect(screen.getByText('Puntuación 120')).toBeInTheDocument()
+    expect(screen.getByText('Publicado por Rollipollipotamus')).toBeInTheDocument()
+    expect(screen.getByText('0 comentarios')).toBeInTheDocument()
+    expect(screen.getByText('Puntuación 1')).toBeInTheDocument()
   })
 })

@@ -26,13 +26,13 @@ export interface PostsData {
 }
 
 export interface Child {
-  kind: Kind;
+  kind: string;
   data: ChildData;
 }
 
 export interface ChildData {
   approved_at_utc: null;
-  subreddit: Subreddit;
+  subreddit: string;
   selftext: string;
   author_fullname: string;
   saved: boolean;
@@ -41,7 +41,7 @@ export interface ChildData {
   clicked: boolean;
   title: string;
   link_flair_richtext: any[];
-  subreddit_name_prefixed: SubredditNamePrefixed;
+  subreddit_name_prefixed: string;
   hidden: boolean;
   pwls: number;
   link_flair_css_class: null | string;
@@ -51,10 +51,10 @@ export interface ChildData {
   hide_score: boolean;
   name: string;
   quarantine: boolean;
-  link_flair_text_color: FlairTextColor;
+  link_flair_text_color: string;
   upvote_ratio: number;
   author_flair_background_color: string;
-  subreddit_type: SubredditType;
+  subreddit_type: string;
   ups: number;
   total_awards_received: number;
   media_embed: MediaEmbed;
@@ -75,20 +75,20 @@ export interface ChildData {
   author_premium: boolean;
   thumbnail: string;
   edited: boolean;
-  author_flair_css_class: AuthorFlairCSSClass;
+  author_flair_css_class: string;
   author_flair_richtext: any[];
   gildings: Gildings;
-  post_hint?: PostHint;
-  content_categories: ContentCategory[];
+  post_hint?: string;
+  content_categories: string[];
   is_self: boolean;
   mod_note: null;
   created: number;
-  link_flair_type: FlairType;
+  link_flair_type: string;
   wls: number;
   removed_by_category: null;
   banned_by: null;
-  author_flair_type: FlairType;
-  domain: Domain;
+  author_flair_type: string;
+  domain: string;
   allow_live_comments: boolean;
   selftext_html: null;
   likes: null;
@@ -114,7 +114,7 @@ export interface ChildData {
   removed_by: null;
   num_reports: null;
   distinguished: null;
-  subreddit_id: SubredditID;
+  subreddit_id: string;
   author_is_blocked: boolean;
   mod_reason_by: null;
   removal_reason: null;
@@ -126,13 +126,13 @@ export interface ChildData {
   discussion_type: null;
   num_comments: number;
   send_replies: boolean;
-  whitelist_status: WhitelistStatus;
+  whitelist_status: string;
   contest_mode: boolean;
   mod_reports: any[];
   author_patreon_flair: boolean;
-  author_flair_text_color: FlairTextColor;
+  author_flair_text_color: string;
   permalink: string;
-  parent_whitelist_status: WhitelistStatus;
+  parent_whitelist_status: string;
   stickied: boolean;
   url: string;
   subreddit_subscribers: number;
@@ -182,29 +182,6 @@ export interface ResizedIcon {
   url: string;
   width: number;
   height: number;
-}
-
-export enum AuthorFlairCSSClass {
-  Tier2 = 'Tier2',
-  Tier3 = 'Tier3',
-}
-
-export enum FlairTextColor {
-  Dark = 'dark',
-}
-
-export enum FlairType {
-  Text = 'text',
-}
-
-export enum ContentCategory {
-  Photography = 'photography',
-}
-
-export enum Domain {
-  IImgurCOM = 'i.imgur.com',
-  IReddIt = 'i.redd.it',
-  RedditCOM = 'reddit.com',
 }
 
 export interface GalleryData {
@@ -295,14 +272,6 @@ export interface PurpleS {
   x: number;
 }
 
-export enum WhitelistStatus {
-  AllAds = 'all_ads',
-}
-
-export enum PostHint {
-  Image = 'image',
-}
-
 export interface Preview {
   images: Image[];
   enabled: boolean;
@@ -313,24 +282,4 @@ export interface Image {
   resolutions: ResizedIcon[];
   variants: MediaEmbed;
   id: string;
-}
-
-export enum Subreddit {
-  Pics = 'pics',
-}
-
-export enum SubredditID {
-  T52Qh0U = 't5_2qh0u',
-}
-
-export enum SubredditNamePrefixed {
-  RPics = 'r/pics',
-}
-
-export enum SubredditType {
-  Public = 'public',
-}
-
-export enum Kind {
-  T3 = 't3',
 }
